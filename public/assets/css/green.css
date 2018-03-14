@@ -2124,7 +2124,7 @@ input[type="color"]:focus,
 
 /*Custom style*/
 
-.btn-primary {
+.btn-primary,.btn-primary:hover,.btn-primary:active,.btn-primary:focus{
     color: #fff;
     background-color: #37bc9b;
     border-color: #37bc9b;

@@ -1,0 +1,55 @@
+
+.gallery-img-list{
+    margin:10px 10px 0 0;overflow:hidden;
+}
+
+.gallery-img-list img{
+    height: 100%;
+}
+.gallery-upload-instruction{
+    font-size:14px;font-style: italic;
+}
+
+.align-centre{
+    text-align:center
+}
+
+.multiple-uploads{
+    list-style: none;
+    margin:0;
+    padding: 0px;
+}
+.multiple-uploads li{
+    width: 100px;
+    height: 100px;
+    float: left;
+    margin-right: 10px;
+    margin-top: 10px;
+    cursor: move;
+}
+.multiple-uploads .add-image{
+    border: 3px dashed #aaa;
+    height: 100px;
+    padding-top: 10%;
+    text-align: center;
+    width: 100px;
+    cursor: pointer !important;
+    font-size: 65px;
+    color: #aaa;
+}
+.multiple-uploads .add-image:hover{
+    border: 3px dashed #78a;
+    color: #78a;
+}
+
+.multiple-uploads .remove-image{
+    color: red;
+    cursor: pointer;
+    float: right;
+    font-size: 17px;
+    font-weight: bold;
+    left: -6px;
+    position: relative;
+    top: -102px;
+    width: 10px;
+}

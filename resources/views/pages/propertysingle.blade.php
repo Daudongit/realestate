@@ -52,36 +52,41 @@
                             </div>
                             @endif
                             
-                            @if($property->property_images1)
+                            @if($property->property_images1 && $property->property_images1 != ' ')
                             <div class="item">
                               <img src="{{ URL::asset('upload/properties/'.$property->property_images1.'-b.jpg') }}" alt="">
                             </div>
                             @endif
                             
-                             @if($property->property_images2)
+                             @if($property->property_images2 && $property->property_images2 != ' ')
                             <div class="item">
                               <img src="{{ URL::asset('upload/properties/'.$property->property_images2.'-b.jpg') }}" alt="">
                             </div>
                             @endif
                             
-                             @if($property->property_images3)
+                             @if($property->property_images3 && $property->property_images3 != ' ')
                             <div class="item">
                               <img src="{{ URL::asset('upload/properties/'.$property->property_images3.'-b.jpg') }}" alt="">
                             </div>
                             @endif
                             
-                             @if($property->property_images4)
+                             @if($property->property_images4 && $property->property_images4 != ' ')
                             <div class="item">
                               <img src="{{ URL::asset('upload/properties/'.$property->property_images4.'-b.jpg') }}" alt="">
                             </div>
                             @endif
                             
-                             @if($property->property_images5)
+                             @if($property->property_images5 && $property->property_images5 != ' ')
                             <div class="item">
                               <img src="{{ URL::asset('upload/properties/'.$property->property_images5.'-b.jpg') }}" alt="">
                             </div>
                             @endif
                             
+                            @foreach($property->gallery as $gallery)
+                              <div class="item">
+                              <img src="{{ URL::asset('upload/gallery/'.$gallery.'-b.jpg') }}" alt="">
+                            </div>
+                            @endforeach
                             
                              
                           </div>

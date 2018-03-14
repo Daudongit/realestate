@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use Auth;
 use App\User;
 use App\Properties;
+use App\Helpers\ImageProcessing;
 
 use Carbon\Carbon;
 use App\Http\Requests;
@@ -261,7 +262,7 @@ class PropertiesController extends MainAdminController
     }	 
      
 	
-	public function delete($id)
+	public function delete($id,ImageProcessing $imgprocess)
     {
     	 
     		
@@ -275,6 +276,8 @@ class PropertiesController extends MainAdminController
 		\File::delete(public_path() .'/upload/properties/'.$property->property_images3.'-b.jpg');
 		\File::delete(public_path() .'/upload/properties/'.$property->property_images4.'-b.jpg');
 		\File::delete(public_path() .'/upload/properties/'.$property->property_images5.'-b.jpg');
+
+		$imgprocess->reset($property->gallery);
 		 
 		$property->delete();
 		

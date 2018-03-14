@@ -58,7 +58,8 @@
 								<button type="button" class="btn btn-default-dark dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
 									Actions <span class="caret"></span>
 								</button>
-								<ul class="dropdown-menu dropdown-menu-right" role="menu"> 
+								<ul class="dropdown-menu dropdown-menu-right" role="menu">
+									<li><a href="{{ url('admin/gallery/'.$property->id) }}"><i class="md md-image"></i> Gallery</a></li> 
 									<li><a href="{{ url('admin/properties/addproperty/'.$property->id) }}"><i class="md md-edit"></i> Edit Editor</a></li>
 									
 									@if(Auth::User()->usertype=="Admin")

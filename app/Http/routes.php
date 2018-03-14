@@ -15,16 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });*/
 
-Route::get('/foo', function () {
-    //return view('welcome');
-    $settings = App\Settings::findOrFail('1');
-    //$settings->
-    //var_dump($settings);
-    print_r("<pre>".$settings."</pre>");
-});
-
-
-
 Route::group(['namespace' => 'Admin', 'prefix' => 'admin'], function () {
 	
 	Route::get('/', 'IndexController@index'); 
@@ -117,8 +107,14 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin'], function () {
 	
 	Route::get('inquiries', 'InquiriesController@inquirieslist');  
 	
-	Route::get('inquiries/delete/{id}', 'InquiriesController@delete');	
-	
+	Route::get('inquiries/delete/{id}', 'InquiriesController@delete');
+
+
+	Route::get('gallery/{property}', 'GalleryController@index');
+
+	Route::post('gallery/upload/{property}', 'GalleryController@update');
+
+	Route::post('gallery/save/{property}', 'GalleryController@store');	
 	
 });
 
