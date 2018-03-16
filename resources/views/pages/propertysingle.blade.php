@@ -99,10 +99,7 @@
                         </div>
                         <h3>Property Overview</h3>
                         <table class="table table-bordered">
-                          <tr>
-                            <td width="20%"><strong>ID</strong></td>
-                            <td>#{{$property->id}}</td>
-                          </tr>
+                          
                           <tr>
                             <td><strong>Price</strong></td>
                             <td>@if($property->sale_price) {{$property->sale_price}} @else {{$property->rent_price}} @endif</td>
@@ -128,7 +125,7 @@
                             <td>{{$property->bedrooms}}</td>
                           </tr>
                           <tr>
-                            <td><strong>Area</strong></td>
+                            <td><strong>Area(m<sup>2</sup>)</strong></td>
                             <td>{{$property->area}}</sup> </td>
                           </tr>
                         </table>
@@ -159,7 +156,7 @@
                             <img src="{{ URL::asset('upload/members/'.$agent->image_icon.'-b.jpg') }}" alt="{{$agent->name}}">
                           </div>
                           <div class="team-description">
-                            <h3>{{$agent->name}}</h3>
+                            <h3 class="text-center">{{$agent->name}}</h3>
                             <p><i class="fa fa-phone"></i> Office : {{$agent->phone}}<br>
                             <i class="fa fa-print"></i> Fax : {{$agent->fax}}</p>
                             <p>{{$agent->about}}</p>

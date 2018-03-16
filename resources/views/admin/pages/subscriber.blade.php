@@ -21,7 +21,7 @@
             <thead>
 	            <tr>
 	                <th>Email</th>
-	                <th>IP</th>
+	                <!-- <th>IP</th> -->
 	                 
 	                <th class="text-center width-100">Action</th>
 	            </tr>
@@ -32,9 +32,9 @@
          	   <tr>
             	
                 <td>{{ $subscriber->email }}</td>
-                <td>{{ $subscriber->ip }}</td>
+                <!-- <td>{{ $subscriber->ip }}</td> -->
                 <td class="text-center">
-                	<a href="{{ url('admin/subscriber/delete/'.$subscriber->id) }}" class="btn btn-default btn-rounded"><i class="md md-delete"></i></a>
+                	<a href="javascript:confirm_delete('{{ url('admin/subscriber/delete/'.$subscriber->id) }}')" class="btn btn-default btn-rounded"><i class="md md-delete"></i></a>
                 
                 
             </td>

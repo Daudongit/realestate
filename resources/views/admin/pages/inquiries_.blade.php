@@ -1,4 +1,3 @@
-
 @extends("admin.admin_app")
 
 @section("content")
@@ -17,7 +16,7 @@
 	@endif
     <div class="panel panel-default panel-shadow">
         <div class="panel-body"> 
-            <table id="data-table-inquiry" cellspacing="0" width="100%"
+            <table id="data-table" cellspacing="0" width="100%"
                     class="table table-striped table-hover dt-responsive">
                 <thead>
     	            <tr>
@@ -25,7 +24,7 @@
     	                <th>Name</th>
     	                <th>Email</th>
     	                <th>Phone</th>
-    	                <th style="display: none;">Message</th>  
+    	                <!-- <th>Message</th> -->  
     	                <th class="text-center width-100">Action</th>
     	            </tr>
                 </thead>
@@ -37,14 +36,21 @@
                         <td>{{ $inquiries->name }}</td>
                         <td>{{ $inquiries->email }}</td>
                         <td>{{ $inquiries->phone }}</td>
-                        <td style="display: none;">{{ $inquiries->message }}</td>
+                        <!-- <td>{{ $inquiries->message }}</td> -->
                         <td class="text-center">
-                        	<a href="javascript:confirm_delete('{{ url('admin/inquiries/delete/'.$inquiries->id) }}');" 
+                        	<a href="{{ url('admin/inquiries/delete/'.$inquiries->id) }}" 
                                 class="btn btn-default btn-rounded">
                                 <i class="md md-delete"></i>
+                            </a>
+                            <a href="javascript:show_message('<?php echo 'world';?>');" 
+                                class="btn btn-default btn-rounded">
+                                <i class="md md-info"></i>
                             </a>    
                         </td>
                     </tr>
+                    <!-- <tr>
+                        <td colspan="5" style="padding:15px 50px 0px;background:#f9f9f9;">{{ $inquiries->message }}</td>
+                    </tr> -->
                 @endforeach 
                 </tbody>
             </table>
@@ -52,14 +58,23 @@
         <div class="clearfix"></div>
     </div>
 </div>
+<div id="myModal" class="modal fade" tabindex="-1" 
+     role="dialog"  style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                Hekko there
+                <div class="message">
+                    
+                </div>
+            </div>
+        </div>    
+    </div>    
+</div>
 <script type="text/javascript">
-	var datails_open = '{{URL::asset("admin_assets/image/details_open.png")}}',
-		datails_close = '{{URL::asset("admin_assets/image/details_close.png")}}';
+    function show_message(argument) {
+        jQuery('#myModal .message').html(argument);
+        jQuery('#myModal').modal('show');
+    }
 </script>
-<script type="text/javascript" 
-		src="{{URL::asset('admin_assets/js/jquery.dcjqaccordion.2.7.min.js')}}">
-</script>
-<script type="text/javascript" src="{{URL::asset('admin_assets/js/inquiry.js')}}">
-     
-  </script>
 @endsection

@@ -100,7 +100,7 @@
                     </div>
                 </div>
 				<div class="form-group">
-                    <label for="" class="col-sm-3 control-label">Area</label>
+                    <label for="" class="col-sm-3 control-label">Area(m<sup>2</sup>)</label>
                     <div class="col-sm-9">
                         <input type="text" name="area" value="{{ isset($property->area) ? $property->area : null }}" class="form-control">
                     </div>

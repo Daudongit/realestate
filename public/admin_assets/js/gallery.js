@@ -80,8 +80,8 @@ function sendFileToServer(formData,status,feature_img_progress)
         },
         error:function(err)
         {
-            console.log(err.responseText);
-            alert(err.responseText);
+            //console.log(err.responseText);
+            //alert(err.responseText);
         }
 
     });

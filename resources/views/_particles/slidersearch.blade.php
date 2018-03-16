@@ -18,7 +18,7 @@
                     </div>
                     <div class="form-group">
                       <label for="minprice">Min Price</label>
-                      <input type="text" name="min_price" class="form-control" placeholder="$200,00"> 
+                      <input type="text" name="min_price" class="form-control" placeholder="£200,00"> 
                     </div>
                   </div>
                   <!-- break -->
@@ -34,7 +34,7 @@
                     </div>
                     <div class="form-group">
                       <label for="maxprice">Max Price</label>
-                      <input type="text" name="max_price" class="form-control" placeholder="$800,000"> 
+                      <input type="text" name="max_price" class="form-control" placeholder="£800,000"> 
                     </div>
                   </div>
                   <div class="col-md-12 col-sm-12">

@@ -18,17 +18,19 @@
          @foreach($propertieslist as $i => $property)
           <div class="col-md-3 col-sm-6 col-xs-12">
             <div class="property-container">
+              <a href="{{URL::to('properties/'.$property->property_slug)}}">
               <div class="property-image">
                  
                 <img src="{{ URL::asset('upload/properties/'.$property->featured_image.'-s.jpg') }}" alt="{{ $property->property_name }}">
                 <div class="property-price">
                   <h4>{{ $property->property_type }}</h4>
-                  <span>@if($property->sale_price) {{$property->sale_price}} @else {{$property->rent_price}} @endif</span>
+                  <span>@if($property->sale_price) {{'£'.$property->sale_price}} @else {{'£'.$property->rent_price}} @endif</span>
                 </div>
                 <div class="property-status">
                   <span>For {{$property->property_purpose}}</span>
                 </div>
               </div>
+              </a>
               <div class="property-features">
                 <span><i class="fa fa-home"></i> {{$property->area}}</span>
                 <span><i class="fa fa-hdd-o"></i> {{$property->bedrooms}}</span>

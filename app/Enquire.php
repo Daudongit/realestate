@@ -13,4 +13,8 @@ class Enquire extends Model
 	
 	 public $timestamps = false;
     
+    public function property()
+    {
+    	return $this->belongsTo('App\properties');
+    }
 }

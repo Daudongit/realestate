@@ -60,9 +60,18 @@
   <script src="{{ URL::asset('admin_assets/js/jvectormap.js') }}"></script>
   
   <!-- App Scripts -->
-  <script src="{{ URL::asset('admin_assets/js/scripts.js') }}"></script>
+  <!-- <script src="{{ URL::asset('admin_assets/js/scripts.js') }}"></script> -->
 
-
+<script type="text/javascript">
+	function confirm_delete(url) {
+        var answer = confirm('Are you sure you want to delete this ?');
+            if(answer)
+            {
+                //console.log(url);
+                document.location = url;
+            }
+    }
+</script>
 </body>
  
 </html>   
