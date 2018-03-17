@@ -52,7 +52,7 @@ return [
             'prefix'   => '',
         ],
 
-        /*'mysql' => [
+        'mysql' => [
             'driver'    => 'mysql',
             'host'      => env('DB_HOST', 'localhost'),
             'database'  => env('DB_DATABASE', ''),
@@ -62,19 +62,19 @@ return [
             'collation' => 'utf8_unicode_ci',
             'prefix'    => '',
             'strict'    => false,
-        ],*/
+        ],
 
-        'mysql' => [
+        /*'mysql' => [
             'driver'    => 'mysql',
             'host'      => 'localhost',
             'port'      => 3306,
-            'database'  => 'realestate',
+            'database'  => 'reales',
             'username'  => 'root',
             'password'  => '',
             'charset'   => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix'    => '',
-        ],
+        ],*/
 
         'pgsql' => [
             'driver'   => 'pgsql',
