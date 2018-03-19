@@ -13,10 +13,11 @@ class Properties extends Model
 	//protected $casts = ['gallery'=>'array'];
 
     public function getGalleryAttribute($gallery)
-    {
-    	if($gallery==' ')
+    {   
+
+    	if($gallery=='')
     	{
-    		return [];
+    		return []; 
     	}
 
     	return json_decode($gallery);

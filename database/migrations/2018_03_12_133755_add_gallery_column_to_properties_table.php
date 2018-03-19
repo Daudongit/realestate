@@ -13,7 +13,7 @@ class AddGalleryColumnToPropertiesTable extends Migration
     public function up()
     {
         Schema::table('properties',function(Blueprint $table){
-            $table->string('gallery')->default(' ');
+            $table->longText('gallery');
         });
     }
 
