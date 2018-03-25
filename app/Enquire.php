@@ -15,6 +15,6 @@ class Enquire extends Model
     
     public function property()
     {
-    	return $this->belongsTo('App\properties');
+    	return $this->belongsTo('App\Properties');
     }
 }
