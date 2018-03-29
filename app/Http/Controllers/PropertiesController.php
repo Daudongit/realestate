@@ -115,35 +115,20 @@ class PropertiesController extends Controller
 	    
 	    $inputs = $request->all();
     	
-    	/*$properties = Properties::where(array('property_type'=>$inputs['type'],'property_purpose'=>$inputs['purpose'])) 
-    
-    							->orderBy('id', 'desc')->paginate(9);*/
-    	if($inputs['purpose']=='Rent')
-    	{
-			$price='rent_price';
-			
-		}
-		else
-		{
-			$price='sale_price';
-		}
-    
     	$properties = DB::table('properties')
     				   ->where('property_type', '=', $inputs['type'])
     				   ->where('property_purpose', '=', $inputs['purpose'])
-    				   ->whereBetween($price, [$inputs['min_price'], $inputs['max_price']]) 
+    				   ->whereBetween('sale_price', [$inputs['min_price'], $inputs['max_price']]) 
     				   ->orderBy('id', 'desc')
     				   ->get();
-					    		
-    	 
-    	 			    
+					    		    	 			    
         return view('pages.searchproperties',compact('properties'));
     }
     
     public function searchkeywordproperties(Request $request)
     {  
     	$data =  \Input::except(array('_token')) ;
-	    
+
 	    $inputs = $request->all();
     	
     	  

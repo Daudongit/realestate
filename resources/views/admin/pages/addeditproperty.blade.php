@@ -106,15 +106,15 @@
                     </div>
                 </div>
 				<div class="form-group">
-                    <label for="" class="col-sm-3 control-label">Sale Price</label>
+                    <label for="" class="col-sm-3 control-label"> Price</label>
                     <div class="col-sm-9">
                         <input type="text" name="sale_price" value="{{ isset($property->sale_price) ? $property->sale_price : null }}" class="form-control">
                     </div>
                 </div>
 				<div class="form-group">
-                    <label for="" class="col-sm-3 control-label">Rent Price</label>
+                    <!-- <label for="" class="col-sm-3 control-label">Rent Price</label> -->
                     <div class="col-sm-9">
-                        <input type="text" name="rent_price" value="{{ isset($property->rent_price) ? $property->rent_price : null }}" class="form-control">
+                        <input type="hidden" name="rent_price" value="{{ isset($property->rent_price) ? $property->rent_price : null }}" class="form-control">
                     </div>
                 </div>
 				<div class="form-group">
