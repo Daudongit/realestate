@@ -132,7 +132,7 @@ $(document).ready(function(){
 
 
     /* map contact */
-    $("#map").gmap3({
+    /*$("#map").gmap3({
         map: {
             options: {
               center: [-7.866315,110.389574],
@@ -149,7 +149,7 @@ $(document).ready(function(){
              )
             }
          }
-    });
+    });*/
 
 
     /* carousel single */
@@ -159,7 +159,7 @@ $(document).ready(function(){
 
 
     /* map property */
-    $('a[href="#location"]').on('shown.bs.tab', function(){
+    /*$('a[href="#location"]').on('shown.bs.tab', function(){
         $("#map-property").gmap3({
             map: {
                 options: {
@@ -178,5 +178,5 @@ $(document).ready(function(){
                 }
              }
         });
-    })
+    })*/
 });

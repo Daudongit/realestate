@@ -18,7 +18,7 @@
                     </div>
                     <div class="form-group">
                       <label for="minprice">Min Price</label>
-                      <input type="text" name="min_price" class="form-control" placeholder="£200,00"> 
+                      <input type="text" name="min_price" class="form-control" placeholder="£20000"> 
                     </div>
                   </div>
                   <!-- break -->
@@ -34,11 +34,14 @@
                     </div>
                     <div class="form-group">
                       <label for="maxprice">Max Price</label>
-                      <input type="text" name="max_price" class="form-control" placeholder="£800,000"> 
+                      <input type="text" name="max_price" class="form-control" placeholder="£800000"> 
                     </div>
                   </div>
-                  <div class="col-md-12 col-sm-12">
+                  <div class="col-md-12 col-sm-12 desktop">
                     <input type="submit" name="submit" value="Search" class="btn btn-primary btn-lg btn-block">
+                  </div>
+                  <div class="col-md-6 col-sm-6 col-xs-6 mobile"> 
+                    <input type="submit" name="submit" value="Search" class="btn btn-primary btn-lg btn-block" style="width:210px;">
                   </div>
 
                 {!! Form::close() !!} 
