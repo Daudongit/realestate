@@ -23,6 +23,9 @@ class DashboardController extends MainAdminController
     }
     public function index()
     { 
+		$featured_properties = 0; $agents = 0; $testimonials = 0; $subscriber = 0;
+		$partners = 0; $publish_properties = 0; $unpublish_properties = 0;
+
     	if(Auth::user()->usertype=='Admin')
     	{
 			$properties_count = Properties::count();
@@ -52,8 +55,13 @@ class DashboardController extends MainAdminController
 			
 		}
     	
-    	
-        return view('admin.pages.dashboard',compact('properties_count','featured_properties','inquiries','agents','testimonials','subscriber','partners','publish_properties','unpublish_properties'));
+        return view(
+			'admin.pages.dashboard',
+			compact(
+				'properties_count','featured_properties','inquiries','agents','testimonials',
+				'subscriber','partners','publish_properties','unpublish_properties'
+			)
+		);
     }
 	
 	 

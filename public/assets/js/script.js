@@ -73,6 +73,7 @@ $(document).ready(function(){
 
     $('.jcarousel-control-prev')
         .jcarouselControl({
+          
             target: '-=1'
         });
 
